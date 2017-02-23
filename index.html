@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Form</title>
+	</head>
+	<body>
+		<section id="form">
+		<h2>Federal Work Study Form</h2>
+		<!--connects to php page-->
+		<form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="POST">
+		<fieldset>
+			<legend>My Information</legend>
+				<!--single line text fields-->
+				<label>First Name: <input type="text" name="first_name_field"></label> <br/>
+				<label>Last Name: <input type="text" name="last_name_field"></label> <br/>
+				<label>Phone Number: <input type="text" name="phone_field"></label> <br/>
+				<label>Email Address: <input type="text" name="email_field"></label> <br/>
+				<!--radio buttons-->
+				<label>Gender: </label>
+					<label>Female <input type="radio" name="gender_field" value="Female"></label>
+					<label>Male <input type="radio" name="gender_field" value="Male"></label> <br/>
+				<!--drop down menu-->
+				<label>Age: </label>
+					<select name="age_field">
+						<option value="Under 18"> Under 18</option>
+						<option value="18 to 24"> 18 to 24</option>
+						<option value="25 to 34"> 25 to 34</option>
+						<option value="35 to 44"> 35 to 44</option>
+						<option value="45 to 54"> 45 to 54</option>
+						<option value="65 and over"> 65+</option> <br/>
+					</select>
+		</fieldset>
+		<fieldset id="availability">
+			<legend>Availability:</legend>
+				<!--checkboxes-->
+				<label>Days Available:</label> <br/>
+					<label>Monday 		<input type="checkbox" name="available_field[]" value="Monday"></label><br/>
+					<label>Tuesday 		<input type="checkbox" name="available_field[]" value="Tuesday"></label><br/>
+					<label>Wednesday 	<input type="checkbox" name="available_field[]" value="Wednesday"></label><br/>
+					<label>Thursday 	<input type="checkbox" name="available_field[]" value="Thursday"></label><br/>
+					<label>Friday 		<input type="checkbox" name="available_field[]" value="Friday"></label><br/>
+					<label>Saturday 	<input type="checkbox" name="available_field[]" value="Saturday"></label><br/>
+					<label>Sunday 		<input type="checkbox" name="available_field[]" value="Sunday"></label><br/>
+				<!--multi line text area-->
+				<label for="commentsbox">Comments:</label><br/>
+					<textarea cols="50" rows="4" name="comments_field" id=commentsbox"></textarea><br/>
+				<!--hidden field-->	
+				<input type="hidden" name="hidden_field" value="dtellez">
+		</fieldset>
+			<!--submit button-->
+			<input type="Submit" value="Submit">
+		</form>
+		</section>
+		
+	
+	</body> 
+</html>
